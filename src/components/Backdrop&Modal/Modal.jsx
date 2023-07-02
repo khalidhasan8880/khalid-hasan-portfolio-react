@@ -3,14 +3,22 @@ import Backdrop from "./Backdrop";
 import "./modal.css";
 import { BiCodeAlt, BiServer, BiXCircle } from "react-icons/bi";
 import { FaEye } from "react-icons/fa6";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 const Modal = ({ handleClose, project }) => {
-  console.log(project?.clientCode);
+  useEffect(()=>{
+    if (project) {
+      document.body.classList.add("opened-modal")
+    }
+    else{
+      document.body.classList.remove("opened-modal")
+    }
+  },[project])
   return (
     <Backdrop onclick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal z-[54] rounded-2xl bg-white relative overflow-y-scroll	p-5">
+        className="modal z-[54] rounded-2xl relative overflow-y-scroll	dark:text-white dark:bg-black bg-white p-5">
         <img
           className="w-full border-2 shadow-xl rounded-xl border-black"
           src={project?.thumbnail}

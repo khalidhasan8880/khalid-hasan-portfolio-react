@@ -19,7 +19,7 @@ const Projects = () => {
   },[])
   // console.log(projects);
   if (loading) {
-    return <h1 className="text-3xl text-center absolute-center">Loading...</h1>;
+    return 
   }
   console.log(selectedProject);
   return (
@@ -33,7 +33,7 @@ const Projects = () => {
             className="w-full min-h-[400px] relative rounded-2xl project_img group cursor-pointer "
             layoutId={project._id}
             onClick={() => setSelectedProject(project)}>
-            <button className={` absolute-center text-2xl hidden group-hover:block text-white z-40 ${selectedProject ? 'hidden' : ''}`}>
+            <button className={` absolute-center text-2xl hidden group-hover:block text-white z-30 ${selectedProject ? 'hidden' : ''}`}>
               View Details
             </button>
             <div className="img_over_layer h-[25%] group-hover:h-[100%] hover:rounded-t-2xl transition-[height] duration-500">

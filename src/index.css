@@ -23,7 +23,9 @@ html {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.3px;
 }
-
+.opened-modal {
+  overflow: hidden;
+}
 section {
   @apply mt-10 min-h-screen;
 }

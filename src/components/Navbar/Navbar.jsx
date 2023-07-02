@@ -8,6 +8,7 @@ import {
   BiSolidSun,
 } from "react-icons/bi";
 import { useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa6";
 const Navbar = () => {
   const [darkTheme, setDarkTheme] = useState(false);
   const themeHandler = () => {
@@ -18,14 +19,14 @@ console.log(darkTheme);
     document.body.className = darkTheme ? 'dark' : 'light';
   }, [darkTheme]);
   return (
-    <header className="flex-between py-3 px-2 fixed top-0 left-0 w-full z-[55] bg-black text-white">
+    <header className="flex-between py-3 px-2 fixed top-0 left-0 w-full z-[55] dark:bg-black bg-white">
       <nav className="">
         <CustomLink href="" title="Home"></CustomLink>
         <CustomLink href="#about" title="About" />
         <CustomLink href="#projects" title="Projects" />
         <CustomLink href="#contact" title="Contact" />
       </nav>
-      <nav className="flex-center ">
+      <nav className="hidden sm:flex justify-center items-center ">
         <motion.a
           target="_blank"
           href="https://web.facebook.com/Khalid.hotsot"
@@ -59,6 +60,13 @@ console.log(darkTheme);
           )}
         </button>
       </nav>
+      <button className="sm:hidden" onClick={themeHandler}>
+          {darkTheme ? (
+            <BiSolidMoon size={25}></BiSolidMoon>
+          ) : (
+            <BiSolidSun size={25}></BiSolidSun>
+          )}
+        </button>
     </header>
   );
 };
