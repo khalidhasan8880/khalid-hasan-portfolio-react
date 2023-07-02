@@ -40,7 +40,7 @@ const Projects = () => {
               <h2 className="font-extrabold text-1xl sm:text-2xl">
                 {project?.name}
               </h2>
-              <p className="text-semibold">{project?.title}</p>
+              <p className="font-semibold">{project?.title}</p>
             </div>
             <img
               className="w-full min-h-[400px] rounded-2xl hover:transform"

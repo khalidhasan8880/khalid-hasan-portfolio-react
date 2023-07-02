@@ -1,7 +1,22 @@
 import { motion } from "framer-motion";
 import CustomLink from "../CustomLink/CustomLink";
-import { BiLogoFacebookCircle, BiLogoLinkedinSquare, BiLogoGithub } from "react-icons/bi";
+import {
+  BiLogoFacebookCircle,
+  BiLogoLinkedinSquare,
+  BiLogoGithub,
+  BiSolidMoon,
+  BiSolidSun,
+} from "react-icons/bi";
+import { useEffect, useState } from "react";
 const Navbar = () => {
+  const [darkTheme, setDarkTheme] = useState(false);
+  const themeHandler = () => {
+    darkTheme ? setDarkTheme(false) : setDarkTheme(true);
+  };
+console.log(darkTheme);
+  useEffect(() => {
+    document.body.className = darkTheme ? 'dark' : 'light';
+  }, [darkTheme]);
   return (
     <header className="flex-between py-3 px-2 fixed top-0 left-0 w-full z-[55] bg-black text-white">
       <nav className="">
@@ -35,8 +50,14 @@ const Navbar = () => {
           whileTap={{ scale: 0.9 }}>
           <BiLogoGithub size={30}></BiLogoGithub>
         </motion.a>
-{/* 
-        <button onClick={themeHandler}>{darkMode ? <BiSolidMoon size={25}></BiSolidMoon>: <BiSolidSun size={25}></BiSolidSun>}</button> */}
+      
+        <button onClick={themeHandler}>
+          {darkTheme ? (
+            <BiSolidMoon size={25}></BiSolidMoon>
+          ) : (
+            <BiSolidSun size={25}></BiSolidSun>
+          )}
+        </button>
       </nav>
     </header>
   );

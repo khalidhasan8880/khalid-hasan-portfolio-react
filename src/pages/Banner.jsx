@@ -31,10 +31,10 @@ const Banner = () => {
             responsive user interfaces using React.js
           </p>
           <div className="flex-center sm:flex sm:justify-start sm:item-start flex-col sm:flex-row gap-6">
-          <a href="https://drive.google.com/u/0/uc?id=19d55O4jzx5DkxTegHrOdtCz969O81i0S&export=download" className="mt-8 px-6 py-3 bg-[#0091ff] font-semibold text-white rounded-full shadow-2xl shadow-[#0091ff] hover:shadow-none transition-all duration-700  flex-center gap-2">
+          <a href="https://drive.google.com/u/0/uc?id=1wLU9jbD45RCWFtx4xBaPCoOrCOBHJW9W&export=download" className="mt-8 px-6 py-3 bg-[#0091ff] font-semibold text-white rounded-full shadow-2xl shadow-[#0091ff] hover:shadow-none transition-all duration-700  flex-center gap-2">
             Download Resume <BiSolidDownload size={22}></BiSolidDownload>
           </a>
-          <a href='#contact' className="sm:mt-8 mt-10 px-6 py-3 bg-[#01439C]  ms-5 font-semibold text-white rounded-full  shadow-[#01439C]  ">
+          <a href='#contact' className="sm:mt-8 mt-10 px-6 py-3 bg-[#01439C]  ms-5 font-semibold text-white rounded-full ">
             Contact
           </a>
           </div>

@@ -7,6 +7,10 @@
 #0091ff
 rgb(15, 93, 188)
 */
+.dark{
+  background-color: #000000;
+  @apply text-white
+}
 html {
   scroll-behavior: smooth;
 }
@@ -30,7 +34,7 @@ section {
   width: 100%;
   z-index: 3;
 
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0.387), #000000);
+  background-image:  linear-gradient(to bottom, #01449c74, #000000c8);
   background-size: 150px;
   background-position: bottom;
   @apply justify-end items-start flex flex-col px-5 pb-6 text-white rounded-b-2xl
