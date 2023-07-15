@@ -4,7 +4,7 @@ import AnimateText from "../components/AnimateText/AnimateText";
 // import Image from "next/image";
 const Banner = () => {
   return (
-    <section className="grid gap-4 grid-cols-1 lg:grid-cols-3 banner py-5 px-2 items-center ">
+    <section id="banner" className="grid gap-4 grid-cols-1 lg:grid-cols-3 banner py-5 px-2 items-center ">
       <div>
         <img
           className="rounded-2xl w-full min-w-[100px]"

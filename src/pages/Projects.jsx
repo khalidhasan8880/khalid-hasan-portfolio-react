@@ -9,6 +9,17 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
 
+
+  useEffect(()=>{
+    if (selectedProject) {
+      document.body.classList.add("opened-modal")
+    }
+    if (selectedProject === null) {
+      document.body.classList.remove("opened-modal")
+    }
+  },[selectedProject])
+
+
   useEffect(()=>{
     fetch('/projects.json')
     .then(res=>res.json())
@@ -33,7 +44,7 @@ const Projects = () => {
             className="w-full min-h-[400px] relative rounded-2xl project_img group cursor-pointer "
             layoutId={project._id}
             onClick={() => setSelectedProject(project)}>
-            <button className={` absolute-center text-2xl hidden group-hover:block text-white z-30 ${selectedProject ? 'hidden' : ''}`}>
+            <button className={` absolute-center text-2xl hidden group-hover:block text-white z-0 ${selectedProject ? 'hidden' : ''}`}>
               View Details
             </button>
             <div className="img_over_layer h-[25%] group-hover:h-[100%] hover:rounded-t-2xl transition-[height] duration-500">
@@ -53,7 +64,7 @@ const Projects = () => {
       {selectedProject && (
         <Modal
           handleClose={() => setSelectedProject(null)}
-          project={selectedProject}></Modal>
+          selectedProject={selectedProject}></Modal>
       )}
     </section>
   );

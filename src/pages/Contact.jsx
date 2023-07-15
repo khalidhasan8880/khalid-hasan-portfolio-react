@@ -62,21 +62,21 @@ const Contact = () => {
         </div>
         <form action="https://formspree.io/f/mdornjlw" method="POST" className="lg:col-span-2 rounded-2xl order-1 lg:order-3">
         <input
-            className="glass w-full outline-[#0091ff] rounded-xl h-14 border-2 border-[#0091ff] px-4 mt-3"
+            className="glass w-full outline-[#0091ff] rounded-xl h-14 border-2 focus:outline-none !border-[#0091ff] px-4 mt-3"
             placeholder="Name"
             name="Name"
             type="text"
             required
           />
           <input
-            className="glass w-full outline-[#0091ff] rounded-xl h-14 border-2 border-[#0091ff] px-4 mt-3"
+            className="glass w-full outline-[#0091ff] rounded-xl h-14 border-2 focus:outline-none !border-[#0091ff] px-4 mt-3"
             placeholder="Email"
             name="email"
             type="email"
             required
           />
           <textarea
-            className="glass w-full outline-[#0091ff] p-4 rounded-xl h-32 border-2 border-[#0091ff] px-4 mt-3"
+            className="glass w-full outline-[#0091ff] p-4 rounded-xl h-32 border-2 focus:outline-none !border-[#0091ff] px-4 mt-3"
             placeholder="Message"
             name="message"
             type="text"
@@ -88,6 +88,8 @@ const Contact = () => {
           />
         </form>
       </div>
+      
+      
     </section>
   );
 };
